@@ -5,10 +5,10 @@ import "../styles/Rides.css";
 const ridesData = [
   {
     id: 1,
-    title: "Sunset Coastal Ride",
-    date: "March 10, 2025",
-    time: "5:00 PM",
-    location: "Marine Drive, Mumbai",
+    title: "Kerala via Rameshwaram",
+    date: "March 4, 2025",
+    time: "11:00 PM",
+    location: "Marathahalli, Bangalore",
     image: "/assets/kerala-ride.jpg",
   }
 ];
