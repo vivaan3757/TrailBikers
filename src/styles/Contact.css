@@ -1,0 +1,125 @@
+/* Dark Themed Contact Us */
+.contact-container {
+  background-color: #121212;
+  color: white;
+  padding: 50px 20px;
+  min-height: 100vh;
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Left Side - Query Form */
+.contact-form {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #ff4500;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+}
+
+.submit-btn:hover {
+  background-color: #e63e00;
+}
+
+/* Right Side - Contact Info */
+.contact-info {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Icons with Colors */
+.icon {
+  font-size: 1.3rem;
+}
+
+.location {
+  color: lightblue;
+}
+
+.phone {
+  color: #34eb98;
+}
+
+.whatsapp {
+  color: #25d366;
+}
+
+.instagram {
+  color: #e4405f;
+}
+
+.email {
+  color: #ffcc00;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

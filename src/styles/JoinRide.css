@@ -1,0 +1,70 @@
+/* Full-page background with a dark multi-color blur */
+.join-ride-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.8), rgba(50, 50, 50, 0.8));
+  backdrop-filter: blur(10px);
+}
+
+/* Centered form */
+.join-ride-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Form title */
+.join-ride-form h2 {
+  margin-bottom: 15px;
+  color: #fff;
+  font-size: 24px;
+}
+
+/* Input fields */
+.join-ride-form input,
+.join-ride-form select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+/* Placeholder styling */
+.join-ride-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Submit button */
+.join-ride-form button {
+  width: 100%;
+  padding: 12px;
+  background: #ff8000;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.join-ride-form button:hover {
+  background: #ff6600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  .join-ride-form {
+    padding: 20px;
+  }
+}
