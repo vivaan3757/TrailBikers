@@ -77,27 +77,37 @@ const Contact = () => {
 
           <div className="info-item">
             <FaMapMarkerAlt className="icon location" />
-            <p>Brookfield, Bangalore 560037</p>
+            <a
+              href="https://maps.app.goo.gl/8T13aajVr3z358wG7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Brookfield, Bangalore 560037
+            </a>
           </div>
 
           <div className="info-item">
             <FaPhone className="icon phone" />
-            <p>+91 7259770330</p>
+            <a href="tel:+917259770330">+91 7259770330</a>
           </div>
 
           <div className="info-item">
             <FaWhatsapp className="icon whatsapp" />
-            <p>+91 7259770330</p>
+            <a href="https://wa.me/917259770330" target="_blank" rel="noopener noreferrer">
+              +91 7259770330
+            </a>
           </div>
 
           <div className="info-item">
             <FaInstagram className="icon instagram" />
-            <p>@trailriders.in</p>
+            <a href="https://www.instagram.com/trailriders.in" target="_blank" rel="noopener noreferrer">
+              @trailriders.in
+            </a>
           </div>
 
           <div className="info-item">
             <FaEnvelope className="icon email" />
-            <p>bikers@trailriders.in</p>
+            <a href="mailto:bikers@trailriders.in">bikers@trailriders.in</a>
           </div>
         </div>
       </div>

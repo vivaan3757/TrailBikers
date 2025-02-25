@@ -123,3 +123,21 @@
     grid-template-columns: 1fr;
   }
 }
+
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.contact-info .info-item a {
+  text-decoration: none;
+  color: #888;
+  font-size: 18px;
+}
+
+.contact-info .info-item a:hover {
+  color: #007bff;
+}
