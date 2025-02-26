@@ -1,23 +1,44 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Navbar.css";
 
-
 const Navbar = () => {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token"); // Check login state
+
+  const handleNavClick = (section) => {
+    navigate("/"); // ✅ First, navigate to home
+    setTimeout(() => {
+      document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+    }, 50); // ✅ Delay to ensure home loads first
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token"); // Remove token
+    window.location.reload(); // Refresh to update UI
+  };
+
   return (
     <nav className="navbar">
-      <div className="logo">Trail Riders</div>
+      <div className="logo" onClick={() => navigate("/")}>Trail Riders</div>
       <ul className="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#rides">Rides</a></li>
-        <li><a href="#blogs">Blogs</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><span onClick={() => handleNavClick("hero")}>Home</span></li>
+        <li><span onClick={() => handleNavClick("events")}>Events</span></li>
+        <li><span onClick={() => handleNavClick("rides")}>Rides</span></li>
+        <li><span onClick={() => handleNavClick("blogs")}>Blogs</span></li>
+        <li><span onClick={() => handleNavClick("gallery")}>Gallery</span></li>
+        <li><span onClick={() => handleNavClick("shop")}>Shop</span></li>
+        <li><span onClick={() => handleNavClick("contact")}>Contact</span></li>
       </ul>
       <div className="auth-buttons">
-        <a href="#login" className="login-btn">Login</a>
-        <a href="#signup" className="signup-btn">Signup</a>
+        {token ? (
+          <button onClick={handleLogout} className="logout-btn">Logout</button>
+        ) : (
+          <>
+            <button onClick={() => navigate("/login")} className="login-btn">Login</button>
+            <button onClick={() => navigate("/signup")} className="signup-btn">Signup</button>
+          </>
+        )}
       </div>
     </nav>
   );

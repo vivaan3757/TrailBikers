@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Events from "./components/Events";
@@ -10,9 +10,13 @@ import Shop from "./components/Shop";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import JoinRide from "./pages/JoinRide"; // New page for joining rides
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 import "./styles/App.css";
 
 function App() {
+  const token = localStorage.getItem("token"); // Check login state
+
   return (
     <Router>
       <Navbar />
@@ -33,6 +37,8 @@ function App() {
           }
         />
         <Route path="/join-ride/:id" element={<JoinRide />} />
+        <Route path="/signup" element={token ? <Navigate to="/" /> : <Signup />} />
+        <Route path="/login" element={token ? <Navigate to="/" /> : <Login />} />
       </Routes>
     </Router>
   );
