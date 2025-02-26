@@ -10,9 +10,14 @@ const app = express();
 // Middleware
 app.use(express.json());
 //app.use(cors());
+//app.use(cors({
+//  origin: "https://trailriders.in",  // Allow only your frontend
+//  credentials: true
+//}));
+
 app.use(cors({
-  origin: "https://trailriders.in",  // Allow only your frontend
-  credentials: true
+    origin: ["https://trailriders.in", "https://trailbikers.onrender.com"],
+    credentials: true
 }));
 
 // Database Connection
