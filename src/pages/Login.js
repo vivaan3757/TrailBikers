@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/Login.css"; // Import CSS for better centering
 
-const API_URL = process.env.REACT_APP_API_URL;
+//const API_URL = process.env.REACT_APP_API_URL;
 
 const Login = () => {
   const navigate = useNavigate();
@@ -15,7 +15,7 @@ const Login = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await axios.post("${API_URL}/api/auth/login", formData);
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, formData);
 
     if (response.data.token) {  // Ensure token is received
       localStorage.setItem("token", response.data.token); // ✅ Save token to localStorage

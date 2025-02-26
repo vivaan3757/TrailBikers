@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../styles/Signup.css"; // Import styles for better UI
 
-const API_URL = process.env.REACT_APP_API_URL;
+//const API_URL = process.env.REACT_APP_API_URL;
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -28,7 +28,7 @@ const Signup = () => {
     }
 
     try {
-      const response = await axios.post("${API_URL}/api/auth/signup", {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/signup`, {
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
