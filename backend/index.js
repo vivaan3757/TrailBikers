@@ -20,6 +20,9 @@ app.use(cors({
     credentials: true
 }));
 
+// Health Check Route
+app.get("/", (req, res) => res.send("Backend is running"));
+
 // Database Connection
 connectDB();
 
